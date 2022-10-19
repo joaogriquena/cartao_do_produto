@@ -8,4 +8,5 @@
 ### About me
 I'm a {frontend} developer and i'm starting my journey in this world.
 
-- [Website](#) 💻 - Working on it.
+- [Website](https://joaogriquena.github.io/cartao_do_produto/projeto/index.html) 💻 - Product preview card component
+.
