@@ -1,0 +1,202 @@
+:root {
+    --color-primary: hsl(158, 36%, 37%);
+    --color-secudary: hsl(30, 38%, 92%);
+
+    --color-neutral-primary: hsl(212, 21%, 14%);
+    --color-neutral-secundary: hsl(228, 12%, 48%);
+    --color-neutral-light: hsl(0, 0%, 100%);
+
+    --font-primary: 'Fraunces', serif;
+    --font-secundary: 'Montserrat', sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: gray;
+}
+
+.container .box {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: -225px;
+    width: 600px;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.container .box img.desktop {
+    width: 300px;
+    height: 450px;
+}
+
+.container .box img.mobile {
+    display: none;
+}
+
+.container .box .txt {
+    width: 300px;
+    height: 450px;
+    text-align: left;
+}
+
+.container .box .txt h3 {
+    font-family: var(--font-secundary);
+    margin: 20px 30px;
+    font-size: 11px;
+    font-weight: normal;
+    letter-spacing: 5px;
+    color: var(--color-neutral-secunday);
+}
+
+.container .box .txt h1.titulo {
+    font-family: var(--color-primary);
+    margin: 20px 30px;
+    font-size: 36px;
+    line-height: 35px;
+    font-weight: bold;
+}
+
+.container .box .txt p {
+    font-family: var(--font-secundary);
+    margin: 20px 30px;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 30px;
+    color: var(--color-neutral-secunday);
+}
+
+.container .box .txt h1.preco {
+    font-family: var(--color-primary);
+    font-size: 30px;
+    margin: 20px 30px;
+    display: inline;
+    line-height: 25px;
+    color: var(--color-primary);
+}
+
+.container .box .txt h4 {
+    font-family: var(--font-secundary);
+    font-weight: normal;
+    text-decoration: line-through;
+    display: inline;
+    font-size: 13px;
+    color: var(--color-neutral-secunday);
+}
+
+.container .box button {
+    font-family: var(--font-secundary);
+    border: none;
+    margin: 35px 30px;
+    padding: 15px 75px;
+    border-radius: 5px;
+    background-color: var(--color-primary);
+    color: white;
+    cursor: pointer;
+
+    background-image: url(../images/icon-cart.svg);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: 50px;
+}
+
+.container .box button:hover {
+    background-color: var(--color-neutral-primary);
+}
+
+
+@media (max-width: 700px) {
+    .container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background-color: gray;
+    }
+
+    .container .box {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -175px;
+        margin-top: -360px;
+        width: 350px;
+        height: 650px;
+        overflow: hidden;
+    }
+
+    .container .box img.desktop {
+        display: none;
+    }
+
+    .container .box img.mobile {
+        display: block;
+        width: 350px;
+        height: 250px;
+    }
+
+    .container .box .txt {
+        width: 350px;
+        height: 650px;
+        text-align: left;
+    }
+
+    .container .box .txt h3 {
+        margin: 30px 30px;
+        font-size: 11px;
+        color: var(--color-neutral-secunday);
+    }
+
+    .container .box .txt h1.titulo {
+        margin: 30px 30px;
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .container .box .txt p {
+        margin: 30px 30px;
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 30px;
+    }
+
+    .container .box .txt h1.preco {
+        font-size: 32px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        display: inline;
+        line-height: 25px;
+    }
+
+    .container .box .txt h4 {
+        font-weight: normal;
+        text-decoration: line-through;
+        display: inline;
+        font-size: 14px;
+    }
+
+    .container .box button {
+        border: none;
+        margin: 20px;
+        padding: 15px 115px;
+        border-radius: 5px;
+
+        background-image: url(../images/icon-cart.svg);
+        background-repeat: no-repeat;
+        background-size: 15px;
+        background-position: 90px;
+    }
+}

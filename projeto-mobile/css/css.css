@@ -3,8 +3,11 @@
     --color-secudary: hsl(30, 38%, 92%);
 
     --color-neutral-primary: hsl(212, 21%, 14%);
-    --color-neutral-secunday: hsl(228, 12%, 48%);
+    --color-neutral-secundary: hsl(228, 12%, 48%);
     --color-neutral-light: hsl(0, 0%, 100%);
+
+    --font-primary: 'Fraunces', serif;
+    --font-secundary: 'Montserrat', sans-serif;
 
 }
 
@@ -16,41 +19,44 @@
 
 .container {
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: gray;
 }
 
 .container .box {
+    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: -300px;
+    margin-left: -187px;
     margin-top: -225px;
-    width: 600px;
-    height: 450px;
+    width: 375px;
+    height: 800px;
     border-radius: 10px;
     overflow: hidden;
     background-color: white;
 }
 
-.container .box .bg {
-    display: flex;
-}
-
-.container .box .bg img {
+.container .box img.desktop {
+    display: none;
     width: 300px;
     height: 450px;
 }
 
-.container .box .bg .txt {
+.container .box img.mobile {
+    display: block;
+
+}
+
+.container .box .txt {
     width: 300px;
     height: 450px;
     text-align: left;
 }
 
-.container .box .bg .txt h3 {
-    font-family: 'Montserrat', sans-serif;
+.container .box .txt h3 {
+    font-family: var(--font-secundary);
     margin: 20px 30px;
     font-size: 11px;
     font-weight: normal;
@@ -58,8 +64,8 @@
     color: var(--color-neutral-secunday);
 }
 
-.container .box .bg .txt h1.titulo {
-    font-family: 'Fraunces', serif;
+.container .box .txt h1.titulo {
+    font-family: var(--color-primary);
     margin: 20px 30px;
     font-size: 36px;
     line-height: 35px;
@@ -67,8 +73,8 @@
     margin-bottom: 15px;
 }
 
-.container .box .bg .txt p {
-    font-family: 'Montserrat', sans-serif;
+.container .box .txt p {
+    font-family: var(--font-secundary);
     margin: 20px 30px;
     font-size: 14px;
     line-height: 22px;
@@ -76,8 +82,8 @@
     color: var(--color-neutral-secunday);
 }
 
-.container .box .bg .txt h1.preco {
-    font-family: 'Fraunces', serif;
+.container .box .txt h1.preco {
+    font-family: var(--color-primary);
     font-size: 30px;
     margin: 20px 30px;
     display: inline;
@@ -85,8 +91,8 @@
     color: var(--color-primary);
 }
 
-.container .box .bg .txt h4 {
-    font-family: 'Montserrat', sans-serif;
+.container .box .txt h4 {
+    font-family: var(--font-secundary);
     font-weight: normal;
     text-decoration: line-through;
     display: inline;
@@ -94,8 +100,8 @@
     color: var(--color-neutral-secunday);
 }
 
-.container .box .bg button {
-    font-family: 'Montserrat', sans-serif;
+.container .box button {
+    font-family: var(--font-secundary);
     border: none;
     margin: 35px 30px;
     padding: 15px 75px;
@@ -110,6 +116,9 @@
     background-position: 50px;
 }
 
-.container .box .bg button:hover {
+.container .box button:hover {
     background-color: var(--color-neutral-primary);
 }
+
+
+@media (max-width: 700px) {}
